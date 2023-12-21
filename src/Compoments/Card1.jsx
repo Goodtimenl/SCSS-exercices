@@ -4,8 +4,8 @@ import '../Css/Card1.css'
 import Stars from './Stars';
 
 const StyledCard = styled.div`
-background:white;
-border-radius: 8px;
+background: white;
+border-radius: 4px;
 margin-left: 1rem;
 width: 350px;
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -16,8 +16,8 @@ flex-direction: column;
 const CardImage = styled.div`
 background: url('/public/legendary-duck-epic-744447428.png') no-repeat center center;
 background-size: cover;
-height: 200px; // Hauteur de l'image
-width: 100%; // Largeur de l'image
+height: 200px; 
+width: 100%;
 margin-bottom: 20px;
 `;
 
@@ -39,28 +39,39 @@ margin-bottom: 10px;
 
 // const Stars = styled.div`
 // background-color: white;
-// color: #ffd700; // Couleur jaune des étoiles
+// color: #ffd700; 
 // `;
 
 const RatingValue = styled.span`
 background-color: white;
-  font-size: 0.8em;
-  padding-left: 10px;
-  color: #999;
-  margin-left: 5px;
+font-size: 0.8em;
+padding-left: 10px;
+color: #999;
+margin-left: 5px;
 `;
 
 const SecondaryText = styled.h4`
 background-color: white;
-  font-size: 1.2em;
-  font-weight: light;
-  color: black;
-  margin-bottom: 3px;
-  padding-left: 10px;
+font-size: 1.2em;
+font-weight: light;
+color: black;
+margin-bottom: 3px;
+padding-left: 10px;
+`;
+
+const StyleBar = styled.div`
+background-color: white;
+display:flex;
+align-items: center;
+justify-content:center;
 `;
 
 const Bar = styled.hr`
-color:black;
+border: 0;
+width: 90%;
+height: 1px;
+background-color: lightgrey; 
+margin: 0.5em 0;
 `;
 
 const Subtitle = styled.p`
@@ -121,12 +132,14 @@ const Card1 = ({ title, secondaryText, subtitle }) => {
 			<CardImage />
 			<Title>Title</Title>
 			<RatingContainer>
-				<Stars> <Stars /> </Stars> {/* Remplacer avec une logique d'étoiles si nécessaire */}
+				<Stars> <Stars /> </Stars>
 				<RatingValue>4.5 (413)</RatingValue>
 			</RatingContainer>
 			<SecondaryText>Secondary text</SecondaryText>
 			<Subtitle>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, architecto?</Subtitle>
-			<Bar />
+			<StyleBar>
+				<Bar />
+			</StyleBar>
 			<ActionSubtitle>Subtitle</ActionSubtitle>
 			<ActionGroup>
 				<ActionButton>Item 1</ActionButton>
