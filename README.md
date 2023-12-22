@@ -1,4 +1,4 @@
-# React + Vite + SCSS
+# React + Vite + Styled components
 
 This is the visual result
 
